@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FecalGuard</string>
+    <string name="fecalguard">FecalGuard</string>
+    <string name="logout_button">Logout Button</string>
+    <string name="history_button">History button</string>
+    <string name="text_home_page">Solusi Cerdas Deteksi Dini Penyakit Ayam melalui Analisis Citra Feses Berbasis AI 🐓</string>
+    <string name="silakan_unggah_gambar">Silakan Unggah Gambar</string>
+    <string name="ambil_gambar_dari_kamera">Ambil Gambar dari Kamera</string>
+    <string name="pilih_gambar_dari_galeri">Pilih Gambar dari Galeri</string>
+    <string name="tutorial_penggunaan">Tutorial Penggunaan</string>
+    <string name="unggah_gambar">Unggah Gambar</string>
+    <string name="ambil_gambar_feses_ayam_menggunakan_kamera_atau_pilih_dari_galeri">Ambil gambar feses ayam menggunakan kamera atau pilih dari galeri</string>
+    <string name="analisis_citra">Analisis Citra</string>
+    <string name="sistem_akan_menganalisis_gambar_untuk_mengidentifikasi_kemungkinan_penyakit">Sistem akan menganalisis gambar untuk mengidentifikasi kemungkinan penyakit</string>
+    <string name="hasil_analisis">Hasil Analisis</string>
+    <string name="hasil_klasifikasi_akan_ditampilkan_sehat_coccidiosis_newcastle_disease_atau_salmonella">Hasil klasifikasi akan ditampilkan: Sehat, Coccidiosis, Newcastle Disease, atau Salmonella</string>
+    <string name="photo">Photo</string>
+    <string name="invalid_email">Email tidak valid, gunakan format: nama@domain.com</string>
+    <string name="password_too_short">Kata sandi terlalu pendek, minimal 8 karakter</string>
+    <string name="text_desc">Ayam Anda dalam keadaan sehat! Kami tidak mendeteksi adanya gejala penyakit pada citra feses yang dianalisis. Terus jaga kebersihan dan pola makan agar tetap sehat.</string>
+    <string name="daftar_link">Belum punya akun? <u>Daftar Sekarang</u></string>
+    <string name="kata_sandi2">Kata sandi (minimal 8 karakter)</string>
+    <string name="contoh_nama_email_com">Contoh: nama@email.com</string>
+    <string name="selamat_datang">Selamat Datang di Aplikasi FecalGuard!</string>
+    <string name="silakan_login">Silakan login sesuai informasi Anda</string>
+    <string name="alamat_email">Alamat Email</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="masuk">Masuk</string>
+    <string name="silakan_daftar">Silakan daftar akun sesuai informasi Anda</string>
+    <string name="daftar_akun">Daftar Akun</string>
+    <string name="sudah_punya_akun_silakan_login">Sudah punya akun? <u>Silakan Login</u></string>
+    <string name="mohon_tunggu">Mohon tunggu..</string>
+    <string name="login_success">Login Berhasil!</string>
+    <string name="login_failed">Login Gagal!</string>
+    <string name="register_success">Akun berhasil didaftarkan!</string>
+    <string name="register_failed">Akun tidak berhasil didaftarkan..</string>
+</resources>

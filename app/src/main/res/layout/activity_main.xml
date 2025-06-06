@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="enterAlways|snap">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="@string/fecalguard"
+                style="@style/TextBold"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="16dp"/>
+
+            <ImageView
+                android:id="@+id/logout_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/logout_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/logout"
+                app:tint="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"/>
+
+<!--            <ImageView-->
+<!--                android:id="@+id/history_button"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:contentDescription="@string/history_button"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/logout_button"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                android:src="@drawable/history"-->
+<!--                app:tint="@color/white"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layout_marginEnd="25dp"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="-15dp"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/red">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="30dp">
+
+                    <ImageView
+                        android:id="@+id/chicken_png"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/chicken"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginEnd="20dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_home_page"
+                        app:layout_constraintEnd_toStartOf="@+id/chicken_png"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        style="@style/TextBold"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="31dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tutorial_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/banner"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/TextBold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/tutorial_penggunaan"/>
+
+            <LinearLayout
+                android:id="@+id/tutorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tutorial_text"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center"
+                android:weightSum="4">
+
+                <!-- Bagian 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:tint="@color/red"
+                        android:src="@drawable/galeri" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unggah_gambar"
+                        style="@style/TextBold"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ambil_gambar_feses_ayam_menggunakan_kamera_atau_pilih_dari_galeri"
+                        android:textSize="11sp"
+                        android:layout_marginTop="10dp"
+                        style="@style/TextRegular"
+                        android:gravity="center"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <!-- Bagian 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:tint="@color/red"
+                        android:src="@drawable/next" />
+
+                </LinearLayout>
+
+                <!-- Bagian 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:tint="@color/red"
+                        android:src="@drawable/model_train" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/analisis_citra"
+                        style="@style/TextBold"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sistem_akan_menganalisis_gambar_untuk_mengidentifikasi_kemungkinan_penyakit"
+                        android:textSize="11sp"
+                        android:layout_marginTop="10dp"
+                        style="@style/TextRegular"
+                        android:gravity="center"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+                <!-- Bagian 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="35dp"
+                        app:tint="@color/red"
+                        android:src="@drawable/next" />
+
+                </LinearLayout>
+
+                <!-- Bagian 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:tint="@color/red"
+                        android:src="@drawable/insight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hasil_analisis"
+                        android:textStyle="bold"
+                        style="@style/TextBold"
+                        android:layout_marginTop="10dp"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hasil_klasifikasi_akan_ditampilkan_sehat_coccidiosis_newcastle_disease_atau_salmonella"
+                        android:textSize="11sp"
+                        style="@style/TextRegular"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        tools:ignore="SmallSp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/deteksi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tutorial"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/TextBold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:text="Fitur Kami"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/analyze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/deteksi_text"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/red">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="30dp">
+
+                    <ImageView
+                        android:id="@+id/camera"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:src="@drawable/model_train"
+                        app:tint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/TextBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="31dp"
+                        android:text="Analisis Penyakit Ayam"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/camera"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/menu_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/analyze"
+                android:layout_marginEnd="-15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:strokeWidth="0dp"
+                android:backgroundTint="@color/red">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="30dp">
+
+                    <ImageView
+                        android:id="@+id/gallery"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:src="@drawable/history"
+                        app:tint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_gallery"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/text_gallery" />
+
+                    <TextView
+                        android:id="@+id/text_gallery"
+                        style="@style/TextBold"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="31dp"
+                        android:text="Lihat Riwayat Analisis"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/gallery"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

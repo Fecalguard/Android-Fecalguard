@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".view.analyze.AnalyzeActivity">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="0dp"
+        android:layout_height="380dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_place_holder"
+        android:contentDescription="@string/photo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="6dp"
+        android:clickable="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="21dp"
+        android:backgroundTint="@color/red"
+        app:layout_constraintEnd_toStartOf="@id/card_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_photo"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/icon_gallery"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/galeri"
+                app:tint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="Icon galeri" />
+
+            <TextView
+                android:id="@+id/text_heading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galeri"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                style="@style/TextBold"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_gallery" />
+
+            <TextView
+                android:id="@+id/text_subheading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Pilih gambar dari galeri Anda dan analisis penyakit"
+                android:textSize="12sp"
+                style="@style/TextRegular"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_heading1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="6dp"
+        android:clickable="true"
+        android:backgroundTint="@color/red"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/card_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/iv_photo"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/icon_camera"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/camera"
+                app:tint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="Icon camera" />
+
+            <TextView
+                android:id="@+id/text_heading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kamera"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                style="@style/TextBold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_camera" />
+
+            <TextView
+                android:id="@+id/text_subheading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Ambil gambar dari kamera dan analisis penyakit"
+                android:textSize="12sp"
+                style="@style/TextRegular"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_heading2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_analyze"
+        android:layout_width="match_parent"
+        app:cornerRadius="32dp"
+        android:layout_height="52dp"
+        app:iconGravity="textStart"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/red"
+        android:text="Analisis Penyakit"
+        style="@style/TextBold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_camera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
