@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_place_holder"
         android:contentDescription="@string/photo" />
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_gallery"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -77,9 +77,9 @@
                 app:layout_constraintTop_toBottomOf="@id/text_heading1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_camera"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
                 app:layout_constraintTop_toBottomOf="@id/text_heading2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_analyze"
