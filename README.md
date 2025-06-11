@@ -12,27 +12,26 @@
 3. 🩺 **Tips perawatan & rekomendasi penanganan**
    Dapatkan saran spesifik berdasarkan hasil diagnosis, termasuk langkah-langkah pengobatan awal, biosekuriti, dan perawatan lanjutan.
 
-## ✅ Prerequisites
-To use or build the app, ensure you have the following:
+## ✅ Prasyarat
 
-### For Mobile:
-- Android OS (minimum version: Android 7.0 Nougat).
-- Stable internet connection.
-- Web browser to open the e-commerce link.
+Untuk menggunakan atau membangun aplikasi, pastikan Anda memiliki hal-hal berikut:
 
-### For Development:
-- Android Studio.
-- Java Development Kit (JDK) or Java Runtime Environment (JRE).
+### Untuk Pengguna Mobile:
 
-## 🛠️ Installation Guide
-### For Mobile Users
-- Visit [Download FecalGuard](https://github.com/qnyara5/FecalGuard-App/blob/ba71040ad359cc2d6aadfb6743811ba38dbe21ad/app-debug.apk)
-- Download the APK file.
-- Locate the APK file in your downloads folder.
-- Install the APK and open FecalGuard to start exploring!
+* Sistem operasi Android (versi minimum: Android 7.0 Nougat).
+* Koneksi internet yang stabil.
+* Peramban web untuk membuka tautan e-commerce.
 
-### For Developers
-- Clone the Repository
-- Navigate to the cloned folder and open the project in Android Studio.
-- Build the App
-- Press Shift + F10 (Windows/Linux) or Control + R (Mac) to build and run the app.
+### Untuk Pengembang:
+
+* Android Studio.
+* Java Development Kit (JDK) atau Java Runtime Environment (JRE).
+
+## 🛠️ Panduan Instalasi
+
+### Untuk Pengguna Mobile
+
+* Kunjungi [Unduh FecalGuard](https://github.com/qnyara5/FecalGuard-App/blob/ba71040ad359cc2d6aadfb6743811ba38dbe21ad/app-debug.apk)
+* Unduh berkas APK.
+* Temukan berkas APK di folder unduhan Anda.
+* Instal APK tersebut dan buka aplikasi FecalGuard untuk mulai menjelajah!
